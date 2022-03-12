@@ -1,5 +1,5 @@
 
-def BuscaBinaria(valor, vetor, esquerda, direita)
+def BuscaBinaria(valor, vetor, esquerd
 	meio = ((esquerda+direita)/2).floor
 
 	if esquerda <= direita

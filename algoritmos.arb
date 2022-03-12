@@ -1,27 +1,80 @@
 # Input : arr[] = {10, 20, 80, 30, 60, 50,
+
 # 110, 100, 130, 170}
+
 # x = 110;
+
 # Output : 6
+
 # Element x is present at index 6
 
 # Input : arr[] = {10, 20, 80, 30, 60, 50,
+
 #           110, 100, 130, 170}
+
 # x = 175;
+
 # Output : -1
+
 # Element x is not present in arr[].
 
-class Array
-  def linear_search(targeted_values)
-    i = 0
-    while i < length
-      return i if self [i] == targeted_values
+# class SearchPattern
 
-      i += 1
-    end
-    "not found"
+# attr_accessor :array, :element
+
+# def initialize(params)
+
+# self.array = params[:array]
+
+# self.element = params[:element]
+
+# end
+
+# def call
+
+#  response
+
+# end
+
+# private
+
+# def response
+
+# return included_element if array.include?(element)
+
+# not_included_element
+
+# end
+
+# def included_element
+
+# "Element #{element} is present at index #{array.index(element)}"
+
+# end
+
+# def not_included_element
+
+# "Element #{element} is not present in array provided"
+
+# end
+
+# end
+
+def linear_search(array, key)
+  if array.index(key).nil?
+
+    -1
+
+  else
+    "#{key} at index #{array.index(key)}"
   end
 end
-array = [10, 20, 80, 30, 60, 50,  110, 100, 130, 170]
-targeted_values = [110]
-returned_indexes = targeted_values.map { |i| array.linear_search(i) }.join(',')
-puts "the targeted values #{targeted_values} are found in the indexes: #{returned_indexes};respectively."
+
+arr = [10, 20, 80, 30, 60, 50, 110, 100, 130, 170]
+
+key = 110
+p linear_search(arr, key)
+
+
+
+
